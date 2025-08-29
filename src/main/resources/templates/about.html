@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{})}">
+<head>
+  <title>About | Smart Contact Manager</title>
+</head>
+<body>
+  <section id="content" class="sm:pl-64 pt-20 px-6 min-h-screen bg-gray-50">
+    <div class="max-w-6xl mx-auto text-center">
+      <!-- Header -->
+      <h1 class="text-5xl font-bold text-blue-600 mb-4">About Smart Contact Manager</h1>
+      <p class="text-lg text-gray-600 mb-10">
+        A smarter way to manage your contacts — with cloud-powered image storage, real-time sync, and seamless accessibility across devices.
+      </p>
+    </div>
+
+    <!-- About Content Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <!-- Our Vision -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
+        <h2 class="text-2xl font-semibold text-blue-500 mb-3">🌍 Our Vision</h2>
+        <p class="text-gray-700">
+          To build a clean, simple, and secure cloud-based platform that replaces outdated contact lists with something modern and smart.
+        </p>
+      </div>
+
+      <!-- Built for Everyone -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
+        <h2 class="text-2xl font-semibold text-blue-500 mb-3">👥 Built for Everyone</h2>
+        <p class="text-gray-700">
+          Whether you're a freelancer, a student, or a team managing hundreds of clients — SCM keeps you organized, fast.
+        </p>
+      </div>
+
+      <!-- Cloud & Image Integration -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
+        <h2 class="text-2xl font-semibold text-blue-500 mb-3">☁️ Cloud + Image Smartness</h2>
+        <p class="text-gray-700">
+          Every contact is more than just a name — attach a profile picture, sync it to the cloud (via Cloudinary), and access it anytime, anywhere.
+        </p>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
+        <h2 class="text-2xl font-semibold text-blue-500 mb-3">🛠 Tech Stack</h2>
+        <p class="text-gray-700">
+          Java + Spring Boot + Thymeleaf + Tailwind CSS + Cloudinary. We’ve built SCM with modern tech to deliver performance and security.
+        </p>
+      </div>
+
+      <!-- Security -->
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300 md:col-span-2">
+        <h2 class="text-2xl font-semibold text-blue-500 mb-3">🔐 Built with Privacy in Mind</h2>
+        <p class="text-gray-700">
+          Your data belongs to you. With secure logins (OAuth & JWT), encrypted storage, and private image handling, SCM puts your privacy first.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-14">
+      <a
+        th:href="@{/home}"
+        class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded transition"
+      >
+        ← Back to Home Page
+      </a>
+    </div>
+  </section>
+</body>
+</html>

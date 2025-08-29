@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{})}">
+<head>
+  <title>Services | Smart Contact Manager</title>
+</head>
+<body>
+  <section id="content" class="sm:pl-64 pt-20 px-6 min-h-screen bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-blue-600">Our Cloud Services</h1>
+        <p class="text-lg text-gray-600 mt-2">
+          Everything you need to manage contacts and media in the cloud.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="mb-4 text-blue-500 text-3xl">
+            📦
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Cloud Storage</h3>
+          <p class="text-gray-600">
+            All contact images and data are securely stored using Cloudinary's high-speed global CDN.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="mb-4 text-blue-500 text-3xl">
+            ⚡
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Image Optimization</h3>
+          <p class="text-gray-600">
+            Instantly optimized images tailored to device, resolution, and bandwidth — powered by Cloudinary.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="mb-4 text-blue-500 text-3xl">
+            🔒
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Secure Uploads</h3>
+          <p class="text-gray-600">
+            Every upload is authenticated and secure. We use signed URLs and token-based protection.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="mb-4 text-blue-500 text-3xl">
+            🧠
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Smart Search</h3>
+          <p class="text-gray-600">
+            Search through thousands of contacts instantly using intelligent filters and matching.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="mb-4 text-blue-500 text-3xl">
+            🌐
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Anywhere Access</h3>
+          <p class="text-gray-600">
+            Your contacts are accessible on all devices, anytime. Cloud sync ensures everything is up-to-date.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="mb-4 text-blue-500 text-3xl">
+            🛠️
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Easy Integration</h3>
+          <p class="text-gray-600">
+            Seamlessly integrate SCM into your workflow or systems using our REST APIs and documentation.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a th:href="@{/home}" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded transition">
+          Back to Home Page
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

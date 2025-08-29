@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}">
+<head>
+  <title data-th-text="${loggedInUser.name} + ' | Dashboard'">Dashboard</title>
+</head>
+<body>
+  <div id="content" class="sm:pl-64 pt-20 px-6 min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    
+    <!-- Sidebar for logged in user -->
+    <div th:if="${loggedInUser}">
+      <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="max-w-6xl mx-auto">
+      <!-- Greeting -->
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-blue-600 dark:text-blue-400">
+          Hello, <span th:text="${loggedInUser.name}">User</span> 👋
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mt-2">
+          Welcome to your Smart Contact Manager Dashboard
+        </p>
+      </div>
+
+      <!-- Dashboard Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <a th:href="@{/user/contacts}" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">📇 Your Contacts</h3>
+          <p class="text-gray-600 dark:text-gray-300">View, manage, and update your saved contacts with ease.</p>
+        </a>
+
+        
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">📤 Upload Images</h3>
+          <p class="text-gray-600 dark:text-gray-300">Upload and manage contact images stored securely in the cloud.</p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">🔒 Secure Access</h3>
+          <p class="text-gray-600 dark:text-gray-300">Your data is protected with role-based security and encryption.</p>
+        </div>
+      </div>
+
+      <!-- Optional: Quick Actions -->
+      <div class="text-center mt-12">
+        <a th:href="@{/user/contacts/add}" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded transition">
+          ➕ Add New Contact
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    console.log("Dashboard page loaded");
+  </script>
+</body>
+</html>
